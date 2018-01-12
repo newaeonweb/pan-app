@@ -1,42 +1,46 @@
-# Pan Application Example
+# Pan Application Games List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) version 1.6 e Angular 5.1.0
 
-## Development server
+# Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone o projeto [aqui](https://github.com/newaeonweb/pan-app)
 
-## Code scaffolding
+Utilize os comandos abaixo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+  yarn install
+```
 
+```
+  yarn add node-sass
+```
+
+> Esses passos assume que você já tem instalado em sua maquina: NodeJS, Yarn, Angular/cli e as demais ferramentas necessárias para rodar projetos com Angular.
+
+## Desenvolvimento
+
+dentro da pasta do projeto Digite: `npm start`. Acesse: `http://localhost:4200/`.
+
+### Comando adicionais
+
+Se utilizar API rodando na mesma maquina, porém em uma porta diferente, utilize: `npm start-proxy` e ajuste o arquivo `proxy-config.json` na raiz da aplicação para a porta utilizada.
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Digite: `npm build`.
 
-## Running unit tests
+Para visualizar a aplicação em produção, digite:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+cd dist
+```
 
-## Running end-to-end tests
+```
+npm run serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Visite: http://localhost:8080
 
-# Aditional infos
+# Produção:
 
-I added some steroids on this boilerplate like: Routes, Service Workers, Proxy config
-
-## Running App from dist folder
-
-  npm install http-server -g
-
-  cd dist http-server -p 8080
-
-Check http://localhost:8080
-
-
-
-
-
-
+O resultado pode ser conferido clicando [aqui](http://pan-app.surge.sh)
