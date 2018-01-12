@@ -1,0 +1,24 @@
+figure {
+  img {
+    width: 400px;
+    max-width: 100%;
+  }
+}
+
+figcaption {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .65);
+  position: relative;
+  bottom: 145px;
+
+  h1.title {
+    font-size: 2em;
+  }
+
+  p {
+    margin-bottom: .5rem;
+    &:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+}

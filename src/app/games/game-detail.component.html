@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-12">
+      <a routerLink="/games">Voltar</a>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <div class="mb-2">
+        <div class="">
+          <figure class="figure">
+            <img class="figure-img img-fluid" [src]="game.game.box.large" [alt]="game.game.name">
+            <figcaption class="figure-caption text-lowercase text-center">
+              <h1 class="title">{{game.game.name}}</h1>
+              <p>{{game.viewers}} visualizações</p>
+              <p>{{game.channels}} canais ao vivo</p>
+              <p>{{game.game.popularity}} popularidade</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
