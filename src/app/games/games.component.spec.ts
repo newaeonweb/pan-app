@@ -1,3 +1,8 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GamesService } from './games.service';
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
+import { FilterPipe } from './filter.pipe';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GamesComponent } from './games.component';
@@ -8,7 +13,9 @@ describe('GamesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GamesComponent ]
+      imports: [FormsModule, HttpClientModule],
+      declarations: [ GamesComponent, FilterPipe, SearchPipe ],
+      providers: [GamesService]
     })
     .compileComponents();
   }));
