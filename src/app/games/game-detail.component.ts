@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class GameDetailComponent implements OnInit {
   public game: any;
+  public getLocalStorage: any;
+  public gameObj: any;
 
   constructor() { }
 
@@ -17,8 +19,16 @@ export class GameDetailComponent implements OnInit {
   }
 
   public getGame () {
-    const game = JSON.parse(window.localStorage.getItem('game'));
-    this.game = game.item;
+    this.getLocalStorage = window.localStorage.getItem('game');
+    console.log(this.getLocalStorage);
+    if (this.getLocalStorage) {
+      this.gameObj = JSON.parse(this.getLocalStorage);
+      this.game = this.gameObj;
+      console.log(this.game);
+    } else {
+      return this.game;
+    }
+
   }
 
 }
