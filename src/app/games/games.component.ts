@@ -33,7 +33,9 @@ export class GamesComponent implements OnInit {
   }
 
   public viewDetail (item: any) {
-    window.localStorage.setItem('game', JSON.stringify({item}));
+    console.log(item);
+    const setLocalStorage = JSON.stringify(item);
+    window.localStorage.setItem('game', setLocalStorage);
   }
 
   public checkDeviceWidth () {
