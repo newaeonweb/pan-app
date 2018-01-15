@@ -1,5 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { GamesService } from './games.service';
+import { DataDetailService } from './data-detail.service';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import { FilterPipe } from './filter.pipe';
@@ -15,7 +16,7 @@ describe('GamesComponent', () => {
     TestBed.configureTestingModule({
       imports: [FormsModule, HttpClientModule],
       declarations: [ GamesComponent, FilterPipe, SearchPipe ],
-      providers: [GamesService]
+      providers: [GamesService, DataDetailService]
     })
     .compileComponents();
   }));

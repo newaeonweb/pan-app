@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from './games.service';
 import { GameInterface } from './games.interface';
+import { DataDetailService } from './data-detail.service';
 
 @Component({
   moduleId: module.id,
@@ -17,7 +18,7 @@ export class GamesComponent implements OnInit {
   public isLoading = false;
   public deviceWidth: number;
 
-  constructor(private gamesService: GamesService) { }
+  constructor(private gamesService: GamesService, private data: DataDetailService) { }
 
   ngOnInit() {
     this.checkDeviceWidth();
@@ -33,9 +34,10 @@ export class GamesComponent implements OnInit {
   }
 
   public viewDetail (item: any) {
-    console.log(item);
     const setLocalStorage = JSON.stringify(item);
     window.localStorage.setItem('game', setLocalStorage);
+
+    this.data.changeGame(item);
   }
 
   public checkDeviceWidth () {

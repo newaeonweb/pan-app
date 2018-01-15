@@ -1,3 +1,4 @@
+import { DataDetailService } from './data-detail.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GameDetailComponent } from './game-detail.component';
@@ -8,7 +9,8 @@ describe('GameDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameDetailComponent ]
+      declarations: [ GameDetailComponent ],
+      providers: [ DataDetailService ]
     })
     .compileComponents();
   }));
@@ -19,7 +21,7 @@ describe('GameDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     console.log(component);
     expect(component).toBeTruthy();
   });

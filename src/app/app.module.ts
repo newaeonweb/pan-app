@@ -1,3 +1,4 @@
+import { DataDetailService } from './games/data-detail.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RouterModule } from '@angular/router';
@@ -33,7 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [GamesService],
+  providers: [GamesService, DataDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
