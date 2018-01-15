@@ -21,7 +21,7 @@ describe('GameDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     console.log(component);
     expect(component).toBeTruthy();
   });
