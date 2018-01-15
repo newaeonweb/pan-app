@@ -22,7 +22,6 @@ describe('GameDetailComponent', () => {
   });
 
   fit('should create', () => {
-    console.log(component);
     expect(component).toBeTruthy();
   });
 });
